@@ -44,7 +44,7 @@ namespace DraganJanjic.Controllers
             }
 
             _repository.Add(zaposleni);
-            return CreatedAtRoute("DefaultApi", new { id = zaposleni.Id }, zaposleni);
+            return CreatedAtRoute("DefaultApi", new { id = zaposleni.Id }, _repository.GetById(zaposleni.Id));
         }
 
         public IHttpActionResult Put(int id, Zaposleni zaposleni)
@@ -68,7 +68,7 @@ namespace DraganJanjic.Controllers
                 return BadRequest();
             }
 
-            return Ok(zaposleni);
+            return Ok(_repository.GetById(zaposleni.Id));
         }
 
         [Authorize]
