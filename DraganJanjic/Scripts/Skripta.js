@@ -146,6 +146,8 @@
         $("#addFormDiv").css("display", "none");
         $("#priRegBtns").css("display", "block");
         $("#pretragaDiv").css("display", "none");
+        $("#pretragaOd").val("");
+        $("#pretragaDo").val("");
         token = null;
         refreshTable();
     });
