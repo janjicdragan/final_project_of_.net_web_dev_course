@@ -239,20 +239,23 @@
         var pretOd = $("#pretragaOd").val();
         var pretDo = $("#pretragaDo").val();
 
-
-        $.ajax({
-            url: host + "/api/pretraga",
-            type: "POST",
-            data: {
-                "Najmanje": pretOd,
-                "Najvise": pretDo
-            },
-            headers: headers
-        })
-            .done(setZaposleni)
-            .fail(function (data, status) {
-                alert("Desila se greska prilikom pretrage!");
+        if (!pretOd || !pretDo) {
+            alert("Polja pretrage moraju biti popunjena");
+        } else {
+            $.ajax({
+                url: host + "/api/pretraga",
+                type: "POST",
+                data: {
+                    "Najmanje": pretOd,
+                    "Najvise": pretDo
+                },
+                headers: headers
             })
+                .done(setZaposleni)
+                .fail(function (data, status) {
+                    alert("Desila se greska prilikom pretrage!");
+                })
+        }
     })
 
     function refreshTable() {
