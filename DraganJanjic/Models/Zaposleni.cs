@@ -16,13 +16,13 @@ namespace DraganJanjic.Models
         [StringLength(50)]
         public string Rola { get; set; }
         [Required]
-        [Range(1960,2000)]
+        [Range(1960,1999)]
         public int GodinaRodjenja { get; set; }
         [Required]
         [Range(2010, 2020)]
         public int GodinaZaposlenja { get; set; }
         [Required]
-        [Range(251d, 10000d)]
+        [Range(251d, 9999d)]
         public decimal Plata { get; set; }
         public OrganizacionaJedinica Jedinica { get; set; }
         public int JedinicaId { get; set; }
