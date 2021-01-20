@@ -1,0 +1,126 @@
+﻿@section Scripts{
+    @Scripts.Render("~/Scripts/Skripta.js")
+}
+
+<div class="container">
+    <div id="priRegBtns" class="text-center">
+        <h3>Korisnik nije prijavljen na sistem</h3>
+        <br />
+        <div>
+            <button id="btnShowPrijavaDiv" style="background-color: yellow; width: 120px">Prijava</button>
+        </div>
+        <div>
+            <button id="btnShowRegDiv" style="width: 120px; margin: 10px">Registracija</button>
+        </div>
+    </div>
+    <div id="prijavaDiv" style="display: none;">
+        <form id="prijavaForm" method="post" action="/post" class="text-center">
+            <h3>Prijava korisnika</h3>
+            <br />
+            <div>
+                <label style="margin-right: 20px">Korisnicko ime:</label>
+                <input type="email" id="korImePrijava" />
+            </div>
+            <div>
+                <label style="margin-right:20px">Lozinka: </label>
+                <input type="password" id="lozPrijava" />
+            </div>
+            <br />
+            <div class="row">
+                <button type="submit" style="background-color:yellow; width: 120px" id="btnPrijaviSe">Prijava</button>
+            </div>
+            <div>
+                <button style="margin: 10px; width: 120px" id="btnPrijavaOdustani">Odustajanje</button>
+            </div>
+        </form>
+    </div>
+    <div id="registracijaDiv" style="display: none">
+        <form id="registracijaForm" method="post" action="/post" class="text-center">
+            <h3>Registracija korisnika</h3>
+            <br />
+            <div>
+                <label style="margin-right: 20px">Korisnicko ime:</label>
+                <input type="email" id="korImeReg" />
+            </div>
+            <div>
+                <label style="margin-right:20px">Lozinka: </label>
+                <input type="password" id="lozReg" />
+            </div>
+            <br />
+            <div>
+                <button type="submit" style="background-color:yellow; width: 120px" id="btnRegistrujSe">Registracija</button>
+
+            </div>
+            <div>
+                <button id="btnRegOdustani" style="margin:20px; width: 120px">Odustajanje</button>
+            </div>
+        </form>
+    </div>
+    <div id="prijavljen" class="text-center" style="display:none">
+        <p id="info"></p>
+        <button id="btnOdjaviSe" style="background-color: yellow; width: 120px">Odjava</button>
+    </div>
+    <br />
+    <div class="text-center" id="pretragaDiv" style="display:none">
+        <form id="pretragaForm" method="post" action="/post" class="text-center">
+            <h3>Pretraga zaposlenih po plati</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                        <label style="margin-right: 20px">Najmanje: </label>
+                        <input type="number" min="0" id="pretragaOd" />
+                    </div>
+                    <div>
+                        <label style="margin-right:20px">Najvise: </label>
+                        <input type="number" min="0" id="pretragaDo" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <button id="btnPretraga" style="background-color:yellow; width: 120px; float:left; vertical-align:central">Trazi</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br />
+    <div id="data">
+
+    </div>
+    <br />
+    <div id="addFormDiv" style="display:none" class="text-center">
+        <form id="addForm" method="POST" action="/post" class="text-center">
+            <h3>Dodavanje novog zaposlenog</h3>
+            <br />
+            <div>
+                <label style="margin-right: 20px">Organizaciona jedinica:</label>
+                <select id="addJedinica" name=""></select>
+            </div>
+            <div>
+                <label style="margin-right:20px">Rola: </label>
+                <input type="text" id="addRola" />
+            </div>
+            <div>
+                <label style="margin-right:20px">Ime i prezime: </label>
+                <input type="text" id="addImeIPrezime" />
+            </div>
+            <div>
+                <label style="margin-right:20px">Godina rodjenja: </label>
+                <input type="number" min="1960" max="2000" id="addGodinaRodjenja" />
+            </div>
+            <div>
+                <label style="margin-right:20px">Godina zaposlenja: </label>
+                <input type="number" min="2010" max="2020" id="addGodinaZaposlenja" />
+            </div>
+            <div>
+                <label style="margin-right:20px">Plata: </label>
+                <input type="number" min="250" max="10000" step="0.05" id="addPlata" />
+            </div>
+            <br />
+            <div>
+                <button type="submit" style="background-color: yellow; width: 120px" id="btnDodaj">Dodavanje</button>
+            </div>
+            <div>
+                <button style="margin: 20px; width: 120px" id="btnAddOdustani">Odustajanje</button>
+            </div>
+        </form>
+    </div>
+</div>
