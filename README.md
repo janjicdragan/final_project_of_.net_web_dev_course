@@ -1,6 +1,6 @@
 # final_project_of_.net_web_dev_course
 
-This is a project done at the final test of FTNInformatika .NET Web Development Course, built using ASP.NET WEB API 2, Entity Framework and JavaScript.
+This is a project done at the final test of .NET Web Development Course, built using ASP.NET WEB API 2, Entity Framework and JavaScript.
 
 ### Prerequisites
 
@@ -16,7 +16,7 @@ Follow these steps to get your development environment set up:
   1. Clone the repository
   1. Start the solution
   1. Navigate to Package Manager Console in Visual Studio and click on "Restore" button to download all necessary packages from NuGet
-  1. Enteer `update-database` in Package Manager Console and run it
+  1. Enter `update-database` in Package Manager Console and run it
   1. Build solution in Visual Studio
   1. Start the application
 
