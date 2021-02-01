@@ -15,3 +15,30 @@ select,
 textarea {
     max-width: 280px;
 }
+
+form {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+.form-element {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+form div label {
+    flex: 1;
+}
+
+form div input {
+    flex: 1;
+}
+
+#btnPretraga {
+    background-color: yellow;
+    width: 120px;
+    float: left;
+    margin-top: 10%;
+}
